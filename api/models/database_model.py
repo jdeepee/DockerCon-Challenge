@@ -7,7 +7,7 @@ from sqlalchemy.orm import sessionmaker
 
 from ..app import *
 
-engine = create_engine("postgresql://josh:josh123@localhost/api")
+engine = create_engine("postgresql://josh:josh12345678@aa169kxdyt8mkhx.ciy2qyqwn3ta.us-west-1.rds.amazonaws.com/api")
 db = SQLAlchemy(application)
 
 Base = declarative_base()
