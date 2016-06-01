@@ -1,4 +1,5 @@
 from flask_restful import Resource
+from flask import Flask, render_template, flash, request, url_for, redirect, session, send_file, Response, jsonify, abort
 from ..app import *
 
 class ControllersDevices(Resource):
@@ -10,7 +11,7 @@ class ControllersDevices(Resource):
 			response = ""
 
 			for c, d in query:
-				response += d.id+":"+d.state
+				response += str(str(d.id)+":"+str(d.state)+",")
 
 			return Response(response=response, status=200, mimetype='text/plain')
 

@@ -1,4 +1,5 @@
 from flask_restful import Resource
+from flask import Flask, render_template, flash, request, url_for, redirect, session, send_file, Response, jsonify, abort
 from ..app import *
 
 class Controllers(Resource):
@@ -22,7 +23,7 @@ class Controllers(Resource):
 
 		check = db.session.query(Controller).filter(Controller.id == id).first()
 
-		if check is not None:
+		if check is None:
 			try:
 				data = Controller(id=id)
 				db.session.add(data)
