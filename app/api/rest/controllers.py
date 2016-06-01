@@ -1,5 +1,5 @@
 from flask_restful import Resource
-from .app import *
+from ..app import *
 
 class Controllers(Resource):
 	def get(self):

@@ -3,8 +3,11 @@ from sqlalchemy import create_engine, MetaData
 from sqlalchemy.orm import scoped_session
 from sqlalchemy_utils import UUIDType
 from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker
 
-engine = create_engine(application.config['SQLALCHEMY_DATABASE_URI'])
+from ..app import *
+
+engine = create_engine("postgresql://josh:josh123@localhost/api")
 db = SQLAlchemy(application)
 
 Base = declarative_base()

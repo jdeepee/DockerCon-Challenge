@@ -22,7 +22,7 @@ class ControllersDevices(Resource):
 		max_state = request.args.get('max_state')
 
 		if device_id and max_state:
-			check = db.session.query(Controller).filter(Controller.id = id).first()
+			check = db.session.query(Controller).filter(Controller.id == id).first()
 			check2 = db.session.query(Device).filter(Device.id == device_id).first()
 
 			if check is not None and check2 is None:
