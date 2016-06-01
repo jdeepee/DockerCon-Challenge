@@ -8,8 +8,6 @@ SQLAlchemy-Utils==0.32.7
 Werkzeug==0.11.10
 aniso8601==1.1.0
 argparse==1.2.1
-click==6.6
-distribute==0.6.24dev-r0
 itsdangerous==0.24
 medusa==0.5.4
 meld3==0.6.5
